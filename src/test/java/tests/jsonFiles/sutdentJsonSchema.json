@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Welcome5": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "employeeDetails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmployeeDetail"
+          }
+        }
+      },
+      "required": [
+        "employeeDetails"
+      ],
+      "title": "Welcome5"
+    },
+    "EmployeeDetail": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "mail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "mail",
+        "name"
+      ],
+      "title": "EmployeeDetail"
+    }
+  }
+}
